@@ -96,6 +96,9 @@ namespace PublisherGenerator
                 int.TryParse(txtLowerBound.Text, out _lowerBound);
                 int.TryParse(txtUpperBound.Text, out _upperBound);
 
+                _fifoQueue = txtFifoQueue.Text.Trim();
+                _stdQueue = txtStdQueue.Text.Trim();
+
                 if (_upperBound < _lowerBound)
                     throw new Exception("Invalid Upperbound!");
 
